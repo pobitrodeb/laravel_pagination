@@ -7,17 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body>
-   <section>
+   <section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Manage Tag</h4>
+                        <h4 class="card-title">Manage ALL User </h4>
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                            <thead class="text-center bg-danger text-white">
+                            <thead class="text-center bg-primary text-white">
                             <tr>
                                 <th>ID NO:</th>
                                 <th>User Name </th>
@@ -32,7 +32,7 @@
                                      <td>{{$loop->iteration }}</td>
                                      <td>{{ $user->name }}</td>
                                      <td>{{ $user->email }}</td>
-                                
+
                                  </tr>
                             @endforeach
                             </tbody>

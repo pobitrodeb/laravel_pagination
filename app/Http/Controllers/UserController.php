@@ -8,6 +8,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        // $allUser = User::paginate(5);
         $allUser = User::all();
         return view('welcome', compact('allUser'));
     }
