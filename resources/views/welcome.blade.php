@@ -27,18 +27,25 @@
                             </thead>
 
                             <tbody>
-                            @foreach($allUser as $user)
-                                 <tr>
-                                     <td>{{$loop->iteration }}</td>
-                                     <td>{{ $user->name }}</td>
-                                     <td>{{ $user->email }}</td>
 
-                                 </tr>
-                            @endforeach
+                                @forelse ($allUser as $user)
+                                <tr>
+                                    <td>{{  $loop->iteration}}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td colspan="3">There are no users.</td>
+                                </tr>
+                                @endforelse
                             </tbody>
                         </table>
-
+                        <div class="card-fotter">
+                            {!! $allUser->withQueryString()->links('pagination::bootstrap-5') !!}
+                        </div>
                     </div>
+
                 </div>
             </div> <!-- end col -->
         </div> <!-- end row -->
